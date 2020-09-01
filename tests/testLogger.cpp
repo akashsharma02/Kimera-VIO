@@ -19,7 +19,7 @@
 #include <vector>
 #include <string>
 #include <algorithm>
-#include <random>
+#include <boost/random.hpp>
 #include <boost/algorithm/string.hpp>
 
 #include <gflags/gflags.h>
@@ -82,7 +82,7 @@ class LoggerFixture : public ::testing::Test {
  protected:
   std::string logger_FLAGS_test_data_path;
   CSVReader csv_reader_;
-  std::mt19937 rng_;
+  boost::random::mt19937 rng_;
   std::default_random_engine random_eng_;
 };
 

@@ -25,6 +25,8 @@
 #include <opencv2/highgui/highgui_c.h>
 #include <opencv2/opencv.hpp>
 
+#include <gtsam/geometry/Cal3_S2.h>
+#include <gtsam/geometry/Pose3.h>
 #include <gtsam/geometry/Unit3.h>
 #include <gtsam/inference/Symbol.h>
 
@@ -32,21 +34,6 @@
 // this file to have Timestamp for example does
 // not complain for now.
 #include "kimera-vio/common/vio_types.h"
-
-// TODO(Toni): do not forward declare that much!!
-// Forward declare classes.
-namespace gtsam {
-class Pose3;
-class Symbol;
-typedef Eigen::MatrixXd Matrix;
-typedef Eigen::Vector3d Vector3;
-typedef Eigen::Matrix<double, 6, 1> Vector6;
-typedef Eigen::Matrix<double, 3, 3> Matrix33;
-typedef Eigen::Matrix<double, 3, 3> Matrix3;
-typedef Eigen::Matrix<double, 6, 6> Matrix66;
-class Rot3;
-class Cal3_S2;
-}
 
 namespace Eigen {
 class Dynamic;

@@ -19,7 +19,7 @@
 #include <vector>
 #include <string>
 #include <algorithm>
-#include <random>
+#include <boost/random.hpp>
 #include <boost/algorithm/string.hpp>
 
 #include <gflags/gflags.h>
